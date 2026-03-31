@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Tela de Início (Clique Aqui) -->
+    <div id="start-screen" class="start-screen">
+        <button id="start-btn" class="start-btn">
+            <i class="fa-solid fa-heart"></i> Abrir carta
+        </button>
+    </div>
+
+    <!-- Áudio Oculto -->
+    <audio id="bg-music" loop>
+        <source src="lied-to.mp3" type="audio/mpeg">
+    </audio>
+
+    <main id="main-content" class="content-wrapper hidden">
+        
+        <!-- Partículas de Corações (via JS) -->
+        <div id="hearts-container"></div>
+        
+        <!-- Cartão Principal Flutuante estilo "Qartinha" -->
+        <article class="qartinha-card fade-in">
+            
+            <header class="card-header">
+                <span class="badge">Para Você, Com Todo Meu Amor</span>
+                <h1 class="main-title">Nossa História</h1>
+            </header>
+            
+            <!-- Carrossel de Fotos com Overlay de Texto -->
+            <div class="carousel-container">
+                <div class="carousel-slides" id="carousel-slides">
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <img src="images/foto1.jpeg" alt="Foto 1" onerror="this.src='https://placehold.co/400x500/222/555?text=Foto+1'">
+                        <div class="slide-overlay">
+                            <span class="slide-counter">1 / 4</span>
+                            <h3 class="slide-title">O começo.</h3>
+                            <p class="slide-desc">Tudo começou aqui, sem imaginar o quanto Deus ainda escreveria na nossa história. O que parecia simples virou uma das melhores partes da minha vida.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <img src="images/foto2.jpeg" alt="Foto 2" onerror="this.src='https://placehold.co/400x500/222/555?text=Foto+2'">
+                        <div class="slide-overlay">
+                            <span class="slide-counter">2 / 4</span>
+                            <h3 class="slide-title">Primeiro encontro.</h3>
+                            <p class="slide-desc">Aqui foi nosso primeiro encontro… o dia que decidi cuidar do seu sorriso e da sua alegria. Desde então, senti uma paz e conexão únicas, e soube que você não seria só mais alguém na minha vida.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <img src="images/foto3.jpeg" alt="Foto 3" onerror="this.src='https://placehold.co/400x500/222/555?text=Foto+3'">
+                        <div class="slide-overlay">
+                            <span class="slide-counter">3 / 4</span>
+                            <h3 class="slide-title">Lembrança.</h3>
+                            <p class="slide-desc">Aqui foi nosso primeiro casamento juntos… e ali tive ainda mais certeza de que é você. Que é com você que quero viver tudo e construir o nosso casamento abençoado.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <img src="images/foto4.jpeg" alt="Foto 4" onerror="this.src='https://placehold.co/400x500/222/555?text=Foto+4'">
+                        <div class="slide-overlay">
+                            <span class="slide-counter">4 / 4</span>
+                            <h3 class="slide-title">Afeto, desejo & carinho.</h3>
+                            <p class="slide-desc">Esse dia foi um dos que eu mais te achei linda. Você estava maravilhosa, gostosa e incrível, e não só por fora, mas também por dentro, o que me faz te admirar cada vez mais.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles do Carrossel -->
+                <div class="carousel-controls">
+                    <button id="prev-btn" class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <!-- Pontinhos e Thumbnails (opcional via JS) -->
+                    <div class="dots-container" id="dots-container">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button id="next-btn" class="nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="divider"><i class="fa-solid fa-heart"></i></div>
+
+            <!-- Texto Principal -->
+            <section class="romantic-text">
+                <p>Hoje é um dia duplamente especial… o dia em que você nasceu e também o dia em que a minha vida ficou muito mais feliz por ter você nela. ❤️</p>
+                <p>Rayssa, feliz aniversário, meu amor! Que Deus continue abençoando cada passo seu, te dando saúde, paz, alegria e realizando todos os seus sonhos, bb. Você merece o mundo e muito mais!❤️🩹</p>
+                <p>E também feliz aniversário pra nós❤️🩹❤️🩹🥳, por mais um tempo juntos, construindo uma história linda, cheia de amor, parceria e momentos que eu nunca vou esquecer. Desde que você chegou, tudo ficou mais leve, mais bonito e mais verdadeiro.</p>
+                <p>Obrigado por ser essa pessoa incrível, por cuidar de mim, por me fazer sorrir até nos dias difíceis e por ser simplesmente você.</p>
+                <p>Eu te amo demais! Que venham muitos e muitos anos ao seu lado.💖 Finalmente 1 ano de namoro... Eu lembro até hoje, quando a gente ficava animado pra fecharmos logo 1 ano de namoro, e cá estamos nós❤️🩹 agradeço muito a Deus pela sua vida❤️🩹 Te amo pretinha</p>
+            </section>
+
+            <!-- Box do Timer (Estilo Qartinha / Moderno Preto) -->
+            <section class="timer-box">
+                <div class="timer-header">
+                    <i class="fa-solid fa-heart timer-icon"></i> NOSSA LINHA DO TEMPO
+                </div>
+                <div class="timer-grid" style="grid-template-columns: 1fr;">
+                    <div class="time-item" style="padding: 2rem;">
+                        <span class="number" id="t-days" style="font-size: 4rem; color: #ff4d4d; text-shadow: 0 0 10px rgba(255,77,77,0.3);">365</span>
+                        <span class="label" style="font-size: 1.2rem; margin-top: 10px;">DIAS COM VOCÊ</span>
+                    </div>
+                </div>
+            </section>
+            
+        </article>
+        
+        <footer class="footer">
+            <p>Feito com amor ❤️</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
